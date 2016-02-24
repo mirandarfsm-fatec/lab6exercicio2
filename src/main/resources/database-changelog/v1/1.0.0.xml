@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+	<changeSet id="1" author="mirandarfsm">
+		<createTable tableName="USUARIO">
+			<column name="ID" autoIncrement="true" type="java.sql.Types.BIGINT">
+				<constraints primaryKey="true" primaryKeyName="PK_USUARIO" />
+			</column>
+			<column name="NOME" type="java.sql.Types.VARCHAR(50)">
+				<constraints nullable="false" />
+			</column>
+			<column name="LOGIN" type="java.sql.Types.VARCHAR(25)">
+				<constraints unique="true" nullable="false" />
+			</column>
+			<column name="SENHA" type="java.sql.Types.VARCHAR(50)">
+				<constraints nullable="false" />
+			</column>
+			<column name="EMAIL" type="java.sql.Types.VARCHAR(50)">
+				<constraints unique="true" />
+			</column>
+		</createTable>
+
+		<createTable tableName="AFASTAMENTO">
+			<column name="ID" autoIncrement="true" type="java.sql.Types.BIGINT">
+				<constraints primaryKey="true" primaryKeyName="PK_AFASTAMENTO" />
+			</column>
+			<column name="MOTIVO" type="java.sql.Types.VARCHAR(50)">
+				<constraints nullable="false" />
+			</column>
+			<column name="DT_INICIO" type="java.sql.Types.DATE">
+				<constraints nullable="false" />
+			</column>
+			<column name="DT_FIM" type="java.sql.Types.DATE">
+				<constraints nullable="false" />
+			</column>
+			<column name="OBSERVACAO" type="java.sql.Types.VARCHAR(300)" />
+			<column name="USUARIO" type="java.sql.Types.BIGINT">
+				<constraints foreignKeyName="FK_AFASTAMENTO_USUARIO"
+					referencedTableName="USUARIO" referencedColumnNames="ID" nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="TAREFA">
+			<column name="ID" autoIncrement="true" type="java.sql.Types.BIGINT">
+				<constraints primaryKey="true" primaryKeyName="PK_TAREFA" />
+			</column>
+			<column name="TITULO" type="java.sql.Types.VARCHAR(50)">
+				<constraints nullable="false" />
+			</column>
+			<column name="DESCRICAO" type="java.sql.Types.VARCHAR(300)" />
+			<column name="STATUS" type="java.sql.Types.INTEGER">
+				<constraints nullable="false" />
+			</column>
+			<column name="DONO_TAREFA" type="java.sql.Types.BIGINT">
+				<constraints foreignKeyName="FK_TAREFA_USUARIO_DONO"
+					referencedTableName="USUARIO" referencedColumnNames="ID" nullable="false" />
+			</column>
+			<column name="RESPONSAVEL" type="java.sql.Types.BIGINT">
+				<constraints foreignKeyName="FK_TAREFA_USUARIO_RESPONSAVEL"
+					referencedTableName="USUARIO" referencedColumnNames="ID" />
+			</column>
+		</createTable>
+
+	</changeSet>
+</databaseChangeLog>
