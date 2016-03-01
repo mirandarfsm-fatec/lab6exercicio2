@@ -1,0 +1,61 @@
+----------------------------------------------------------------
+Wed Feb 24 00:22:51 BRT 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance a816c00e-0153-114c-fb79-00000d7b9ad0 
+on database directory memory:D:\Users\Robson\workspace\fatec\lab6\exercicio2\prova with class loader sun.misc.Launcher$AppClassLoader@76ed5528 
+Loaded from file:/D:/Users/Robson/.m2/repository/org/apache/derby/derby/10.11.1.1/derby-10.11.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_73-b02
+user.dir=D:\Users\Robson\workspace\fatec\lab6\exercicio2
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Wed Feb 24 00:22:54 BRT 2016:
+Shutting down instance a816c00e-0153-114c-fb79-00000d7b9ad0 on database directory memory:D:\Users\Robson\workspace\fatec\lab6\exercicio2\prova with class loader sun.misc.Launcher$AppClassLoader@76ed5528 
+----------------------------------------------------------------
+Wed Feb 24 00:22:54 BRT 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance f8e18104-0153-114c-fb79-00000d7b9ad0 
+on database directory memory:D:\Users\Robson\workspace\fatec\lab6\exercicio2\prova with class loader sun.misc.Launcher$AppClassLoader@76ed5528 
+Loaded from file:/D:/Users/Robson/.m2/repository/org/apache/derby/derby/10.11.1.1/derby-10.11.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_73-b02
+user.dir=D:\Users\Robson\workspace\fatec\lab6\exercicio2
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Wed Feb 24 00:22:55 BRT 2016:
+Shutting down instance f8e18104-0153-114c-fb79-00000d7b9ad0 on database directory memory:D:\Users\Robson\workspace\fatec\lab6\exercicio2\prova with class loader sun.misc.Launcher$AppClassLoader@76ed5528 
+----------------------------------------------------------------
+Wed Feb 24 00:22:55 BRT 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance 862b8134-0153-114c-fb79-00000d7b9ad0 
+on database directory memory:D:\Users\Robson\workspace\fatec\lab6\exercicio2\prova with class loader sun.misc.Launcher$AppClassLoader@76ed5528 
+Loaded from file:/D:/Users/Robson/.m2/repository/org/apache/derby/derby/10.11.1.1/derby-10.11.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_73-b02
+user.dir=D:\Users\Robson\workspace\fatec\lab6\exercicio2
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Wed Feb 24 00:22:55 BRT 2016:
+Shutting down instance 862b8134-0153-114c-fb79-00000d7b9ad0 on database directory memory:D:\Users\Robson\workspace\fatec\lab6\exercicio2\prova with class loader sun.misc.Launcher$AppClassLoader@76ed5528 
+----------------------------------------------------------------
+Wed Feb 24 00:22:55 BRT 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance 63a4c15e-0153-114c-fb79-00000d7b9ad0 
+on database directory memory:D:\Users\Robson\workspace\fatec\lab6\exercicio2\prova with class loader sun.misc.Launcher$AppClassLoader@76ed5528 
+Loaded from file:/D:/Users/Robson/.m2/repository/org/apache/derby/derby/10.11.1.1/derby-10.11.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_73-b02
+user.dir=D:\Users\Robson\workspace\fatec\lab6\exercicio2
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

@@ -15,7 +15,7 @@ public interface UsuarioRepository extends CrudRepository<Usuario, Long> {
 	
 	public List<Usuario> findByIdGreaterThan(Long id);
 	
-	public List<Usuario> findByAutorizacoesNome(String nome);
+	//public List<Usuario> findByAutorizacoesNome(String nome);
 	
 	@Query("select u from Usuario u where u.nome like %?1%")
 	public List<Usuario> buscaUsuario(String nome);
