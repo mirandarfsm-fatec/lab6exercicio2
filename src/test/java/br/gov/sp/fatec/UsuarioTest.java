@@ -1,8 +1,8 @@
 package br.gov.sp.fatec;
 
-import static org.junit.Assert.*;
-
-import java.util.ArrayList;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -10,15 +10,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import br.gov.sp.fatec.model.Autorizacao;
+import br.gov.sp.fatec.factory.UsuarioFactory;
 import br.gov.sp.fatec.model.Usuario;
 import br.gov.sp.fatec.repository.UsuarioRepository;
 
 public class UsuarioTest {
 
 	@Autowired
-	UsuarioRepository usuarioRepo;
-	ApplicationContext context;
+	private UsuarioRepository usuarioRepo;
+	private ApplicationContext context;
 
 	@Before
 	public void setUp() {
@@ -28,11 +28,7 @@ public class UsuarioTest {
 
 	@Test
 	public void salvarUsuario() {
-		Usuario usuario = new Usuario();
-		usuario.setNome("Paulo");
-		usuario.setSenha("senha");
-		usuario.setEmail("pauloppc@gmail.com");
-		usuario.setLogin("pauloppc");
+		Usuario usuario = UsuarioFactory.criarUsuario(null,"Paulo","senha","pauloppc@gmail.com","pauloppc");
 		usuarioRepo.save(usuario);
 		assertNotNull(usuario.getId());
 		assertNotNull(usuarioRepo.findByNome("Paulo").getNome());
@@ -40,11 +36,7 @@ public class UsuarioTest {
 
 	@Test
 	public void atualizarUsuario(){
-		Usuario usuario = new Usuario();
-		usuario.setNome("Maria");
-		usuario.setSenha("123");
-		usuario.setEmail("mariamae@gmail.com");
-		usuario.setLogin("mariamae");
+		Usuario usuario = UsuarioFactory.criarUsuario(null,"Maria","123","mariamae@gmail.com","mariamae");
 		usuarioRepo.save(usuario);
 		usuario = usuarioRepo.findByNome("Maria");
 		usuario.setSenha("teste");
@@ -54,16 +46,10 @@ public class UsuarioTest {
 	
 	@Test
 	public void deletarUsuario(){
-		Usuario usuario = new Usuario();
-		usuario.setNome("Carlos");
-		usuario.setSenha("tatata");
-		usuario.setEmail("carloscap@gmail.com");
-		usuario.setLogin("carloscap");
+		Usuario usuario = UsuarioFactory.criarUsuario(null,"Carlos","tatata","carloscap@gmail.com","carloscap");
 		usuarioRepo.save(usuario);
 		usuarioRepo.delete(usuario);
 		assertNull(usuarioRepo.findByNome("Carlos"));
-		
-		
 	}
 	
 	
