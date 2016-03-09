@@ -2,8 +2,6 @@ package br.gov.sp.fatec;
 
 import java.util.Date;
 
-import lombok.Setter;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
